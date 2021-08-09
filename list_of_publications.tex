@@ -1,0 +1,21 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[backend=biber,sorting=ynt,style=nature,defernumbers=true]{biblatex}
+\usepackage{hyperref,doi}
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[super]{nth}
+
+\addbibresource{my_pubs.bib}
+\title{List of Publications}
+\author{by Artemii Dmitriev}
+\date{}
+
+\begin{document}
+\maketitle
+\nocite{*}
+\printbibliography[keyword={FirstAuthor}, title={First-authored articles}]
+\printbibliography[keyword={CoAuthor}, title={Co-authored articles}]
+\printbibliography[keyword={Conference}, title={Conference publications}]
+\printbibliography[keyword={CollaborationPaper}, title={LIGO collaboration papers}]
+\end{document}
