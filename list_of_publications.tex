@@ -8,14 +8,20 @@
 
 \addbibresource{my_pubs.bib}
 \title{List of Publications}
-\author{by Artemii Dmitriev}
+\author{by Artemiy Dmitriev}
 \date{}
+
+\defbibfilter{ShortAuthorListPubs}{%
+    keyword=FirstAuthor or keyword=CoAuthor or keyword=Conference
+}
 
 \begin{document}
 \maketitle
 \nocite{*}
-\printbibliography[keyword={FirstAuthor}, title={First-authored articles}]
-\printbibliography[keyword={CoAuthor}, title={Co-authored articles}]
-\printbibliography[keyword={Conference}, title={Conference publications}]
-\printbibliography[keyword={CollaborationPaper}, title={LIGO collaboration papers}]
+%\printbibliography[keyword={FirstAuthor}, title={First-authored articles}]
+%\printbibliography[keyword={CoAuthor}, title={Co-authored articles}]
+%\printbibliography[keyword={Conference}, title={Conference publications}]
+%\printbibliography[keyword={CollaborationPaper}, title={LIGO collaboration papers}]
+\printbibliography[filter=ShortAuthorListPubs,title={Publications with short author list}]
+\printbibliography[keyword={CollaborationPaper},title={Collaboration papers}]
 \end{document}
